@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhangyu.seckill.dao.InventoryDao">
+    <update id="reduceInventory">
+
+        update
+        inventory
+        set
+        quantity = quantity - 1,
+        version = #{newVersion}
+        where id = #{id}
+        and version = #{oldVersion}
+        ;
+    </update>
+
+    <select id="queryById" resultType="Product" parameterType="long">
+        select id,name,quantity,start_time,end_time,create_time,version
+        from inventory
+        where id = #{id}
+    </select>
+
+    <select id="queryAll" resultType="Product">
+        select id,name,quantity,start_time,end_time,create_time,version
+        from inventory
+        order by create_time desc
+        limit #{offset},#{limit}
+    </select>
+
+</mapper>
