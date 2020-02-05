@@ -83,13 +83,13 @@ Later I will add  service to confirm that order and pay for it.
 
 
 
-#Contributing
+# Contributing
 
  Feel free to dive in! [Open an issue ](https://github.com/zhangyu1402/flashsale/issues/new) or submit PRs.
 
 
 
-#License
+# License
 
  [MIT](https://opensource.org/licenses/MIT) © Yu Zhang
 
