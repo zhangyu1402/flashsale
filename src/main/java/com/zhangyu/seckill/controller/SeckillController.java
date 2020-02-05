@@ -38,4 +38,12 @@ public class SeckillController {
         return new Response<>(true, seckillResult);
     }
 
+    @RequestMapping(value = "/test",
+            method = RequestMethod.POST)
+    @ResponseBody
+    public String  test() throws SeckillException {
+        //springmvc valid
+        return "success";
+    }
+
 }

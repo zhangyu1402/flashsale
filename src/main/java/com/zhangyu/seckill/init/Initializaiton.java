@@ -42,7 +42,7 @@ public class Initializaiton implements CommandLineRunner {
 
     private void initRedis() {
         Jedis jedis = jedisPool.getResource();
-        //清空Redis缓存
+        //clean the redis
         jedis.flushDB();
         List<Product> products = inventoryDao.queryAll(0, 10);
         if (products == null || products.size()< 1) {
@@ -56,10 +56,6 @@ public class Initializaiton implements CommandLineRunner {
             String inventoryKey = RedisPrefix.SECKILL_INVENTORY + product.getId();
             logger.error("[debug] set {} : {}",inventoryKey,String.valueOf(product.getQuantity()));
             jedis.set(inventoryKey, String.valueOf(product.getQuantity()));
-            String seckillGoodsKey = RedisPrefix.SECKILL_PRODUCTS + product.getId();
-//            byte[] goodsBytes = ProtostuffIOUtil.toByteArray(product, MyRuntimeSchema.getInstance().getGoodsRuntimeSchema(),
-//                    LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE));
-//            jedis.set(seckillGoodsKey.getBytes(), goodsBytes);
         }
         jedis.close();
         logger.info("Redis initialization finished ! ");

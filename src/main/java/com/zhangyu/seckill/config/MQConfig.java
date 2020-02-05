@@ -70,13 +70,13 @@ public class MQConfig {
     @Bean("mqConnectionSeckill")
     public Connection mqConnectionSeckill(@Autowired MQConfigBean mqConfigBean) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
-        //用户名
+
         factory.setUsername(username);
-        //密码
+
         factory.setPassword(password);
-        //虚拟主机路径（相当于数据库名）
+
         factory.setVirtualHost(virtualHost);
-        //返回连接
+
         return factory.newConnection(mqConfigBean.getAddressList());
     }
     @Bean("mqConnectionReceive")

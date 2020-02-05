@@ -56,7 +56,7 @@ public class RedisConfig {
     @Bean
     public JedisPool initJedisPool(@Qualifier("poolConfig") JedisPoolConfig poolConfig) {
         logger.info("JedisPool injection begin:");
-        //  Redis无密码时候的处理
+
         if ("".equals(password)){
             password = null;
         }
