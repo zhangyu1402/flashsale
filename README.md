@@ -71,13 +71,13 @@ Later I will add  service to confirm that order and pay for it.
 
 # Design
 
-###Project depolyment Structure 
+##Project depolyment Structure 
 
 <img src="https://github.com/zhangyu1402/flashsale/blob/master/img/seckill_img1.png?raw=true" width="70%"/>
 
 
 
-###Seckill Work Flow
+##Seckill Work Flow
 
 <img src="https://github.com/zhangyu1402/flashsale/blob/master/img/seckill_img2.png?raw=true" width="85%"/>
 
