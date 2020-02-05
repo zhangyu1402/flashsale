@@ -73,21 +73,23 @@ Later I will add  service to confirm that order and pay for it.
 
 ###Project depolyment Structure 
 
-<img src="/Users/zhangyu/Desktop/seckill_img1.png" width="70%"/>
+<img src="https://github.com/zhangyu1402/flashsale/blob/master/img/seckill_img1.png?raw=true" width="70%"/>
 
 
 
 ###Seckill Work Flow
 
-<img src="/Users/zhangyu/Desktop/seckill_img2.png" width="85%"/>
+<img src="https://github.com/zhangyu1402/flashsale/blob/master/img/seckill_img2.png?raw=true" width="85%"/>
 
-## Contributing
+
+
+#Contributing
 
  Feel free to dive in! [Open an issue ](https://github.com/zhangyu1402/flashsale/issues/new) or submit PRs.
 
 
 
-## License
+#License
 
  [MIT](https://opensource.org/licenses/MIT) © Yu Zhang
 
